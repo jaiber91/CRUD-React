@@ -1,12 +1,13 @@
 import React from 'react'
 import {Outlet} from 'react-router-dom' //para traer al component hijo desde App: Login
-
+import './Home.css'
 const Home = () => {
   return (
-    <>
-     <h1>Bienvenido a Home</h1>
-    <Outlet /> 
-    </>
+    
+    <div className='home'>
+       
+        <Outlet /> 
+    </div>
   )
 }
 

@@ -1,0 +1,66 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    width: 30rem;
+    height: 32rem;
+    border: 1px solid #462AB8;
+    border-radius: 10px;
+}
+.form h3{
+    margin: 0 0 5rem 0 ;
+    
+    text-transform: uppercase;
+    color: #462AB8;
+}
+.form-email{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem ;
+}
+.form-email label, .form-password label{
+    font-size: 0.8rem;
+}
+.form-email input, .form-password input {
+    border: 1px solid #CFCED6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 17rem;
+    height: 2.5rem;
+}
+.form-password{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.form-btn{
+    font-weight: 500;
+    font-size: 1rem;
+    background: #462AB8;
+    border-radius: 10px;
+    border-style: none;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.form h5{
+    color: #462AB8;
+    font-weight: 300;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 576px) {
+    .form{
+        width: 25rem;
+        height: 28rem;
+    }
+    .form h3{
+        margin: 1rem 0 3rem 0;
+    }
+  
+}
