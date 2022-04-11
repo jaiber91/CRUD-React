@@ -22,11 +22,13 @@
 
 .register-name label, .register-email label, .register-password label, .register-RepeatPassword label{
     font-size: 0.8rem;
+    padding-left: 1rem;
 }
 .register-name input, .register-email input, .register-password input, .register-RepeatPassword input{
     border: 1px solid #CFCED6;
     box-sizing: border-box;
     border-radius: 10px;
+    padding-left: 1rem;
     width: 17rem;
     height: 2.5rem;
 }

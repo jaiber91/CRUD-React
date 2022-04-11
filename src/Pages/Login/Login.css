@@ -20,12 +20,14 @@
     margin-bottom: 3rem ;
 }
 .form-email label, .form-password label{
+    padding-left: 1rem;
     font-size: 0.8rem;
 }
 .form-email input, .form-password input {
     border: 1px solid #CFCED6;
     box-sizing: border-box;
     border-radius: 10px;
+    padding-left: 1rem;
     width: 17rem;
     height: 2.5rem;
 }
