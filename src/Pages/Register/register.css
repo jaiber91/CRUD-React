@@ -10,7 +10,7 @@
     border-radius: 10px;
 }
 .register h3{
-    margin: 0 0 5rem 0 ;
+    margin: 0 0 2rem 0 ;
     text-transform: uppercase;
     color: #462AB8;
 }
@@ -45,7 +45,13 @@
     cursor: pointer;
 }
 
-
+.register-nav a{
+    text-decoration: none;
+    margin-top: 0;
+    color: #462AB8;
+    font-weight: 300;
+    cursor: pointer;
+}
 @media (max-width: 576px) {
     .register{
         width: 25rem;

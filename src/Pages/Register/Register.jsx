@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 import './register.css'
 
 
@@ -26,6 +26,9 @@ const Register = () => {
         </div>
         <input className='register-btn' type="submit" value='Create' />
         
+        <nav className="register-nav">
+          <Link to='/'>Login</Link>
+        </nav>
     </form>
     </>
   )
