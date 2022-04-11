@@ -1,0 +1,25 @@
+.cards-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 12rem;
+    height: 14rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 5%;
+  }
+  .cards-details h3{
+    text-align: center;
+    margin: 0 0 4rem 0;
+  }
+  .cards-details-icons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+  }
+  .cards-details-icons img{
+    cursor: pointer;
+  }
