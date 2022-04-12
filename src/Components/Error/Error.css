@@ -1,0 +1,9 @@
+.errorForm{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 50%;
+    background: #FF0000;
+    color: white;
+    font-weight: 700;
+}
