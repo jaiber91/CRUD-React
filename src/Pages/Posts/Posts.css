@@ -17,14 +17,18 @@
     margin-left: 4rem;
     color: #462AB8;
 }
-.navigation button{
+.navigation-button{
+    display: flex;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-right: 4rem;
+    border-radius: 10px;
     background: #462AB8;
     color: #ffffff;
     border-style: none;
-    width: 6rem;
-    height: 2rem;
-    margin-right: 4rem;
-    border-radius: 10px;
+    text-decoration: none;
     text-transform: capitalize;
     font-weight: 700;
     cursor: pointer;
