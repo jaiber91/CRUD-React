@@ -24,6 +24,7 @@ console.log(Publicposts);
       </header>
 
       <section className="cards">
+       
           <Card />
           <Card />
           <Card />

@@ -41,6 +41,7 @@ const Login = () => {
         { header: "Accept: application/json" }
       );
       console.log(response);
+      
       localStorage.setItem('token', response.data.access_token)
       setAutentication(response)
     } catch (error) {
@@ -60,8 +61,8 @@ const Login = () => {
           <input 
           type="email" 
           id='email'
-          value={email}
-          placeholder='email@email.com' 
+          placeholder='email@email.com'
+          value={email} 
           onChange={(e) => setEmail(e.target.value)}/>
         </div>
 
@@ -70,8 +71,8 @@ const Login = () => {
           <input 
           type="password" 
           id='password' 
-          value={password}
-          placeholder='type your password' 
+          placeholder='type your password'
+          value={password} 
           onChange={(e) => setPassword(e.target.value)}/>
         </div>
         <input className='form-btn' type="submit" value='Login' />

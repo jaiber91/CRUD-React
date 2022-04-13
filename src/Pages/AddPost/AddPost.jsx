@@ -1,7 +1,7 @@
 import {useState} from "react";
 import "./AddPost.css";
 import Error from "../../Components/Error/Error";
-
+import SeePosts from "../../Hooks/SeePosts";
 
 const AddPost = () => {
   //Estado inicial del formulario
@@ -11,24 +11,38 @@ const AddPost = () => {
   //Estado para mostrar/ocultar mensaje de error
   const [error, setError] = useState(false);
 
-  const submitPost = async =>{
+  //Extrayendo función del provider
+  const {submitPostAdd} = SeePosts()
+
+  const submitPost =  async (e) =>{
     e.preventDefault();
 
     //Validando que todos los campos no estén vacios
     if ([title, text].includes('')) {
       setError(true);
+      return
     } else {
       //quitar mensaje error cuando todos los campos estén llenos
       setError(false);
+
+      //Pasando datos hacia Provider
+      submitPostAdd({title, text})
     }
+
+    setTitle('')
+    setText('')
+    
   }
+  
+
+  
 
   return (
     <>
       <section className="container">
    
         <form  className="addPost" onSubmit={submitPost}>
-        {error && <Error message="Error: all fields are required" />}
+           {error && <Error message="Error: all fields are required" />}
           <div className="addPost-title">
             <label htmlFor="title">Title</label>
             <input 

@@ -1,5 +1,5 @@
 import {useState, useEffect, createContext} from 'react'
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const AuthContext = createContext()
@@ -10,6 +10,7 @@ const Authprovider = ({children}) => {
     
     const [charging, setCharging] = useState(true)
 
+    const navigate = useNavigate()
     //verificando si hay un token almacenado
     useEffect(()=>{
         const autUser = async () =>{
@@ -20,17 +21,22 @@ const Authprovider = ({children}) => {
                 return
             }else{
                 console.log('abemus token');
+                
                 const configuration = {
                     headers: {
                         "Accept": "application/json",
                         Authorization: `Bearer ${token}`
                     }
                 }
+
                 try {
                     const {data} = await axios.get ('http://front-test.vinixcode.cloud:8000/api/auth/user-profile', configuration)
                     setAutentication(data)
-                } catch (error) {
                     
+                    //redireccionando a la vista de post
+                    navigate('/posts')
+                } catch (error) {
+                    setAutentication({})
                 }
                 setCharging(false)
             }

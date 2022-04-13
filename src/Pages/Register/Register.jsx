@@ -62,20 +62,7 @@ const Register = () => {
     setPassword('')
     setpassword_confirmation('')
     
-    //Creando usuarios en la API
     
-      /*const url = 'http://front-test.vinixcode.cloud:8000/api/auth/register'
-
-  fetch(
-    url, 
-    {method: "POST",
-    headers: {
-    "Content-Type": "application/json"}, 
-    body: JSON.stringify({ name, email, password, password_confirmation})
-  })
-  
-  .then(response => response.json())
-  .then(data => console.log(data));*/
     
 
     
