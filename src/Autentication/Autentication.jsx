@@ -8,12 +8,15 @@ const Authprovider = ({children}) => {
     //almacenando los datos del usuario autenticado
     const [autentication, setAutentication] = useState({})
     
+    const [charging, setCharging] = useState(true)
+
     //verificando si hay un token almacenado
     useEffect(()=>{
         const autUser = async () =>{
             const token = localStorage.getItem('token')
             
             if (!token) {
+                setCharging(false)
                 return
             }else{
                 console.log('abemus token');
@@ -29,6 +32,7 @@ const Authprovider = ({children}) => {
                 } catch (error) {
                     
                 }
+                setCharging(false)
             }
         }
 
@@ -41,7 +45,8 @@ const Authprovider = ({children}) => {
         <AuthContext.Provider
           value={{
             autentication,
-            setAutentication
+            setAutentication,
+            charging
           }}  
         >
             {children}

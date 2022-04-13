@@ -2,11 +2,14 @@ import { Outlet, Navigate } from "react-router-dom"
 import Aut from "../../Hooks/Auth"
 
 const SecureRute = () => {
-    const {autentication} = Aut()
-   console.log(autentication);
+    const {autentication, charging} = Aut()
+   
+    if (charging) {
+        return 'cargando...'
+    }
     return (
     <>
-    {/*autentication.id ? 'Autenticar': <Navigate to='/' />*/}
+    {autentication.id ? <Outlet/>: <Navigate to='/' />}
     </>
   )
 }

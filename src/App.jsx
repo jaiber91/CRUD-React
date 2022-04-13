@@ -25,12 +25,7 @@ function App() {
         <Route  index element={<Posts/>}/>
       </Route>
 
-      
-      
         
-      
-     
-      
     </Routes>
     </Authprovider>
     </BrowserRouter>
