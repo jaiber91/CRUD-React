@@ -3,14 +3,16 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Register from './Pages/Register/Register'
 import Posts from './Pages/Posts/Posts'
-import AddPost from './Pages/AddPost/AddPost'
-
+//import AddPost from './Pages/AddPost/AddPost'
+import {Authprovider} from './Autentication/Autentication'
+import SecureRute from './Pages/RuteSecure/SecureRute'
 
 function App() {
  
 
   return (
     <BrowserRouter>
+     <Authprovider>
     <Routes>
       <Route path='/' element={<Home />}>
         <Route index element={<Login/>}/>
@@ -19,13 +21,18 @@ function App() {
       </Route>
       {/* Las siguientes rutas deben funcionar solo cuando se loguea el usuario*/}
       
-      <Route path='posts' element={<Posts/>} />
-      <Route path='addpost' element={<AddPost/>}/>
+      <Route path='/posts' element={<SecureRute/>}>
+        <Route  index element={<Posts/>}/>
+      </Route>
+
+      
+      
         
       
      
       
     </Routes>
+    </Authprovider>
     </BrowserRouter>
   )
 }
